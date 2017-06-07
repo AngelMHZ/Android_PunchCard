@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.herokuapp.punchcard_app.punchd.StoreDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/cyan"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:text="Punch Detail"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:id="@+id/toolbar_title"/>
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/grey"
+            android:layout_alignParentBottom="true"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+
+
+        <Button
+            android:id="@+id/toolbar_titleBottom1"
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:text="All Places"
+            android:background="#A9A9A9"
+            android:textSize="5pt"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:clickable="true" />
+
+        <Button
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:text="Punch!"
+            android:textSize="5pt"
+            android:textColor="#FFFFFF"
+            android:background="#808080"
+            android:gravity="center"
+            android:id="@+id/toolbar_titleBottom2"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/toolbar_titleBottom1"
+            android:layout_toLeftOf="@+id/toolbar_titleBottom3"
+            android:clickable="true" />
+
+        <Button
+            android:layout_width="50pt"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:text="My Places"
+            android:background="#696969"
+            android:textSize="5pt"
+            android:textColor="@color/cyan"
+            android:gravity="center"
+            android:id="@+id/toolbar_titleBottom3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true" />
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_above="@id/toolbar_bottom"
+            android:id="@+id/linearLayout">
+
+            <RelativeLayout
+                android:id="@+id/View"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/storeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Store Name"
+                    android:textColor="#000000"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_marginTop="27dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp" />
+
+                <TextView
+                    android:id="@+id/storeAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cyan"
+                    android:text="Store Address"
+                    android:layout_below="@+id/storeName"
+                    android:layout_alignStart="@+id/storeName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reward Description"
+                    android:id="@+id/rewardDescTitle"
+                    android:textSize="8pt"
+                    android:layout_marginTop="27dp"
+                    android:layout_below="@+id/storeAddress"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:id="@+id/rewardDesc"
+                    android:layout_marginTop="27dp"
+                    android:gravity="center"
+                    android:textColor="@color/cyan"
+                    android:layout_below="@+id/rewardDescTitle"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Punch Progress"
+                    android:id="@+id/PunchProgTitle"
+                    android:textSize="8pt"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="_______________________________________________________"
+                    android:id="@+id/sideLine11"
+                    android:textColor="#FFCC00"
+                    android:layout_above="@+id/rewardDesc"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/rewardDescTitle"
+                    android:layout_toStartOf="@+id/rewardDescTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="_______________________________________________________"
+                    android:id="@+id/sideLine12"
+                    android:textColor="#FFCC00"
+                    android:layout_above="@+id/rewardDesc"
+                    android:layout_alignTop="@+id/rewardDescTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/rewardDescTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="_______________________________________________________"
+                    android:id="@+id/sideLine21"
+                    android:textColor="#FFCC00"
+                    android:layout_alignBottom="@+id/PunchProgTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/PunchProgTitle"
+                    android:layout_alignTop="@+id/PunchProgTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="_______________________________________________________"
+                    android:id="@+id/sideLine22"
+                    android:textColor="#FFCC00"
+                    android:layout_alignBottom="@+id/PunchProgTitle"
+                    android:layout_alignTop="@+id/PunchProgTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/PunchProgTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="8pt"
+                    android:gravity="end"
+                    android:id="@+id/PunchCurrent"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/PunchProgTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/slash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="8pt"
+                    android:id="@+id/PunchRequired"
+                    android:layout_alignBottom="@+id/slash"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/slash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:id="@+id/slash"
+                    android:textColor="@color/cyan"
+                    android:textSize="16pt"
+                    android:layout_alignTop="@+id/PunchCurrent"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redeem"
+                    android:id="@+id/RedeemButton"
+                    android:layout_marginBottom="40dp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/grey"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/sideLine21"
+                    android:layout_toStartOf="@id/sideLine22" />
+
+
+            </RelativeLayout> />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; My Punches"
+            android:textColor = "@color/white"
+            android:gravity="center"
+            android:textSize="7pt"
+            android:id="@+id/toolbar_backButton"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/toolbar_titleBottom2" />
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
